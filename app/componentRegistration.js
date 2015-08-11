@@ -3,7 +3,7 @@ ko.components.register('action', {
     var numInstances = 0;
 
     return function() {
-      console.log('foo ', numInstances);
+      console.log('foo ', numInstances++);
     }
   })(),
   template: '<span>Test</span>'
