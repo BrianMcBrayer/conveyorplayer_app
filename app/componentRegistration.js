@@ -8,7 +8,7 @@
 
       this.text = ko.observable(params.text)
     },
-    template: '<span data-bind="text: text()"></span>'
+    template: '<div data-bind="text: text()"></div>'
   });
 
 })(ko);
