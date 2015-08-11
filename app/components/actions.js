@@ -4,7 +4,7 @@
     viewModel: function(params) {
       console.log('foo yeah!');
     },
-    template: $.get('actions.tmpl.html')
+    template: $.get('/app/components/actions.tmpl.html')
   });
 
 })(ko, jQuery);
