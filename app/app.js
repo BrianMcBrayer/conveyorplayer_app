@@ -1,7 +1,19 @@
 (function(ko) {
-  var appViewModel = {
-    appName: 'ConveyorPlayer'
-  };
 
-  ko.applyBindings(appViewModel);
+  var app = (function(my) {
+    my.appViewModel = (function(my) {
+
+      my.appName = 'ConveyorPlayer';
+
+      my.actionActivated = function(action) {
+
+      };
+
+      return my;
+    })(my.appViewModel || {});
+
+    return my;
+  })(app || {});
+
+  ko.applyBindings(app.appViewModel);
 })(ko);
