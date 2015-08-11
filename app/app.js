@@ -1,19 +1,14 @@
 (function(ko) {
 
-  var app = (function(my) {
-    my.appViewModel = (function(my) {
+  var engine = {
 
-      my.appName = 'ConveyorPlayer';
+  };
 
-      my.actionActivated = function(action) {
+  var app = {
+    engine: engine,
+    actions: [],
+    items: []
+  };
 
-      };
-
-      return my;
-    })(my.appViewModel || {});
-
-    return my;
-  })(app || {});
-
-  ko.applyBindings(app.appViewModel);
+  ko.applyBindings(app);
 })(ko);
