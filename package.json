@@ -1,0 +1,22 @@
+{
+  "name": "conveyorplayer_app",
+  "version": "1.0.0",
+  "description": "Do all the things! Don't mess up!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianMcBrayer/conveyorplayer_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrianMcBrayer/conveyorplayer_app/issues"
+  },
+  "homepage": "https://github.com/BrianMcBrayer/conveyorplayer_app#readme",
+  "devDependencies": {
+    "bower": "^1.4.1"
+  }
+}

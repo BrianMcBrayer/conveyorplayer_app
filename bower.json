@@ -1,0 +1,21 @@
+{
+  "name": "conveyorplayer_app",
+  "version": "0.0.0",
+  "homepage": "https://github.com/BrianMcBrayer/conveyorplayer_app",
+  "authors": [
+    "bmcbrayer@precisionlender.com <bmcbrayer@precisionlender.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout": "~3.3.0",
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3"
+  }
+}
