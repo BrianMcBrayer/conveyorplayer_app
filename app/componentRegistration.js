@@ -1,10 +1,10 @@
 ko.components.register('action', {
-  viewModel: (function() {
-    var numInstances = 0;
-
-    return function() {
-      console.log('foo ', numInstances++);
+  viewModel: function() {
+    if (params.text === null) {
+      throw new Error("Cannot have action without text!");
     }
-  })(),
+
+    this.text = ko.observable(params.text)
+  },
   template: '<span>Test</span>'
 });
