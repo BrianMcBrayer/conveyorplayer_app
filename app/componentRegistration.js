@@ -1,7 +1,7 @@
 (function(ko) {
 
   ko.components.register('action', {
-    viewModel: function() {
+    viewModel: function(params) {
       if (params.text === null) {
         throw new Error("Cannot have action without text!");
       }
