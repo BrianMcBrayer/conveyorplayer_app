@@ -6,5 +6,5 @@ ko.components.register('action', {
 
     this.text = ko.observable(params.text)
   },
-  template: '<span>Test</span>'
+  template: '<span data-bind="text: text"></span>'
 });
