@@ -6,8 +6,8 @@ var app = (function(me) {
 
     var movementOffset = 1;
 
-    var conveyorSpeed = 50; // * 50 ms
-    var speedupOffset = 100;
+    var conveyorSpeed = 25; // * 50 ms
+    var speedupOffset = 50;
 
     init();
 
