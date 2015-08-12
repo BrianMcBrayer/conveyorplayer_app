@@ -14,7 +14,7 @@ var app = (function(me) {
       });
 
       if (numberOfCreatedItems++ > 6) {
-        me.offTick(createdItem);
+        me.offTick(createItem);
       }
 
     }
