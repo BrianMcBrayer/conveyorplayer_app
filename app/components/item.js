@@ -1,10 +1,8 @@
 (function() {
   function viewModel(params) {
     var me = this;
-    var vm = params.vm;
 
-    me.text = vm.text;
-    me.style = vm.style;    
+    me.text = params.text;    
   }
 
   return viewModel;

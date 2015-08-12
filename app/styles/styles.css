@@ -5,7 +5,8 @@
   width: 100%;
 }
 
-item, item .item {
+item {
+  position: relative;
   display: inline-block;
 }
 
