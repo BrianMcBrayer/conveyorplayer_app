@@ -4,7 +4,7 @@ var app = (function(me, $, doc) {
     me.gameportWidth = gameportWidth;
 
     function gameportWidth() {
-      return window.pageWidth;
+      return $(document).width;
     }
 
     return me;
