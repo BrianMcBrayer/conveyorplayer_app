@@ -6,10 +6,10 @@
 
   var customComponentLoader = {
     getConfig: function(name, cb) {
-      var config = {
+      cb({
         template: { path: PATHS.COMPONENTS + name + ".tmpl.html" },
         viewModel: { path: PATHS.COMPONENTS + name + ".js" }
-      }
+      });
     },
     loadTemplate: function(name, templateConfig, callback) {
       var path = templateConfig.path;
