@@ -27,7 +27,7 @@ var app = (function(me) {
     }
 
     me.onTick(createItem, 30);
-    me.onTick(moveConveyor, 60);
+    me.onTick(moveConveyor, 50);
 
     return me;
   })(me.engine);
