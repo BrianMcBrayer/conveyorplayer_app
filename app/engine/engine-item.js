@@ -7,10 +7,17 @@ var app = (function(me) {
     });
 
     function Item(id, type) {
-      this.id = id;
-      this.type = type;
-      this.text = TYPE_TEXT[this.type];
-      this.xpos = ko.observable(0);
+      var self = this;
+
+      self.id = id;
+      self.type = type;
+      self.text = TYPE_TEXT[this.type];
+      self.xpos = ko.observable(0);
+      self.style = ko.computed(function() {
+        return {
+          left: self.xpos() + 'px'
+        };
+      });
     }
 
     me.Item = Item;

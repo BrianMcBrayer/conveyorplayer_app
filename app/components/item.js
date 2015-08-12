@@ -4,7 +4,7 @@
     var vm = params.vm;
 
     me.text = vm.text;
-    me.xpos = vm.xpos;    
+    me.style = vm.style;    
   }
 
   return viewModel;
