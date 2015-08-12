@@ -5,6 +5,10 @@
   width: 100%;
 }
 
+item {
+  display: inline-block;
+}
+
 conveyor {
   display: block;
 
