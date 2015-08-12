@@ -1,6 +1,6 @@
 (function(engine) {
 
-  function viewModel (params) {
+  function viewModel(params) {
     var me = this;
 
     me.id = params.id;

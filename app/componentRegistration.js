@@ -3,7 +3,8 @@
   var autoComponents = [
     'actions',
     'action',
-    'conveyor'
+    'conveyor',
+    'conveyor-belt'
   ];
 
   autoComponents.forEach(function(component) {
