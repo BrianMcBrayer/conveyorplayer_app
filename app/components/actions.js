@@ -1,11 +1,13 @@
-(function() {
+(function(radio) {
   function viewModel (params) {
     var cleanParams = (params == null ? {} : params);
-    debugger;
-    this.actions = cleanParams.actions;
-    this.activateAction = cleanParams.activateAction;
 
+    this.actions = cleanParams.actions;
+
+    radio('actActRequest').subscribe(function(action) {
+      radio('actAct').broadcast(action);
+    });
   }
 
   return viewModel;
-})();
+})(radio);
