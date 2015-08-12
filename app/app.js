@@ -6,12 +6,9 @@
 
   var app = {
     engine: engine,
-    actions: [
-      {
-        id: "inflate-action",
-        text: "Inflate"
-      }
-    ],
+    actions: ko.observableArray([
+      { id: "inflate-action", text: "Inflate" }
+    ]),
     items: []
   };
 
