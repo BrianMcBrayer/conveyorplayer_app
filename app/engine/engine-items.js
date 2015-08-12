@@ -8,7 +8,7 @@ var app = (function(me) {
 
     function createItem() {
       me.items.push(
-        new app.engine.Item('item' + _itemUID++, 'ball');
+        new app.engine.Item('item' + _itemUID++, 'ball')
       );
 
       if (numberOfCreatedItems++ > 6) {
