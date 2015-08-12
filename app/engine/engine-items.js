@@ -13,6 +13,8 @@ var app = (function(me) {
 
     function init() {
       me.items = ko.observableArray();
+      me.createItem = createItem;
+
       me.onTick(moveConveyor, conveyorSpeed);
       me.onTick(speedUpConveyor, speedupOffset);
     }

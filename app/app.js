@@ -6,7 +6,10 @@ window.app = (function(me, ko, radio) {
     ko.applyBindings(me);
 
     // Create a few items
-    
+    me.engine.onTick(function() {
+      me.engine.createItem('ball');
+    }, 30);
+
   }
 
   return me;
