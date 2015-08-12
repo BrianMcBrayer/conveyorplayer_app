@@ -1,5 +1,5 @@
 var app = (function(me) {
-  var engine = (function(me) {
+  me.engine = (function(me) {
 
     me.actions = ko.observableArray([
         { id: "inflate-action", text: "Inflate" },
