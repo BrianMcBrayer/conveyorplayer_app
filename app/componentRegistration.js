@@ -1,5 +1,5 @@
 (function(ko) {
 
-  ko.components.register('action');
+  ko.components.register('action', {});
 
 })(ko);
