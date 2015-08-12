@@ -7,16 +7,13 @@ var app = (function(me) {
     me.items = ko.observableArray();
 
     function createItem() {
-      me.items.push({
-        id: 'createdItem-' + _itemUID++,
-        text: 'Ball',
-        xPos: 0
-      });
+      me.items.push(
+        new app.engine.Item('item' + _itemUID++, 'ball');
+      );
 
       if (numberOfCreatedItems++ > 6) {
         me.offTick(createItem);
       }
-
     }
 
     me.onTick(createItem, 60);
