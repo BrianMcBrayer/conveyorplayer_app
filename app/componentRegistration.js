@@ -2,7 +2,8 @@
 
   var autoComponents = [
     'actions',
-    'action'
+    'action',
+    'conveyor'
   ];
 
   autoComponents.forEach(function(component) {
