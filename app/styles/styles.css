@@ -6,8 +6,8 @@
 }
 
 item {
-  position: relative;
-  display: inline;
+  position: absolute;
+  display: inline-block;
 }
 
 conveyor {
