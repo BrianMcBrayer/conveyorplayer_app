@@ -1,11 +1,10 @@
 (function(engine) {
 
   function viewModel (params) {
-    var cleanParams = (params == null ? {} : params);
     var me = this;
 
-    me.id = cleanParams.id;
-    me.text = cleanParams.text;
+    me.id = params.id;
+    me.text = params.text;
 
     me.clicked = function() {
       engine.activateAction(me);

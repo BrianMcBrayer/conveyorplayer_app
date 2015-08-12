@@ -1,9 +1,9 @@
 (function() {
 
   function viewModel (params) {
-    var cleanParams = (params == null ? {} : params);
+    var me = this;
 
-    this.actions = cleanParams.actions;
+    me.actions = params.actions;
   }
 
   return viewModel;
