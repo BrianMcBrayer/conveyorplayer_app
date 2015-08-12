@@ -6,20 +6,38 @@ var app = (function(me) {
 
     var movementOffset = 5;
 
-    me.items = ko.observableArray();
+    var conveyorSpeed = 50; // * 50 ms
+    var speedupOffset = 100;
 
-    function createItem() {
+    init();
+
+    function init() {
+      me.items = ko.observableArray();
+      me.onTick(moveConveyor, conveyorSpeed);
+      me.onTick(speedUpConveyor, speedupOffset);
+    }
+
+    function createItem(type) {
       me.items.push(
-        new app.engine.Item('item' + _itemUID++, 'ball')
+        new app.engine.Item('item' + _itemUID++, type)
       );
-
-      if (numberOfCreatedItems++ === 3) {
-        me.offTick(createItem);
-      }
     }
 
     function moveConveyor() {
       me.items().forEach(moveSingleItem);
+    }
+
+    function speedUpConveyor() {
+      var speed = Math.floor(conveyorSpeed * 0.9);
+
+      if (speed < 1) {
+        speed = 1;
+      }
+
+      conveyorSpeed = speed;
+
+      me.offTick(moveConveyor);
+      me.onTick(moveConveyor, conveyorSpeed);
     }
 
     function moveSingleItem(item) {
@@ -30,9 +48,6 @@ var app = (function(me) {
         me.items.remove(item);
       }
     }
-
-    me.onTick(createItem, 30);
-    me.onTick(moveConveyor, 5);
 
     return me;
   })(me.engine);
