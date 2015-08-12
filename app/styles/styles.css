@@ -5,7 +5,7 @@
   width: 100%;
 }
 
-item {
+item, item .item {
   display: inline-block;
 }
 
