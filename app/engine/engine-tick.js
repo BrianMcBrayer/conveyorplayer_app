@@ -6,6 +6,7 @@ var app = (function(me) {
     var tickIntervalId = setInterval(ticked, 15);
 
     me.onTick = onTick;
+    me.oneTick = oneTick;
     me.offTick = offTick;
 
     function onTick(fn, tickMod) {
