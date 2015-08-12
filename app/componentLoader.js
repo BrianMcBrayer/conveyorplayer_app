@@ -1,8 +1,8 @@
 (function(ko, $) {
 
-  var PATHS = Object.freeze{
+  var PATHS = Object.freeze({
     COMPONENTS: "/app/components/"
-  };
+  });
 
   var customComponentLoader = {
     getConfig: function(name, cb) {
