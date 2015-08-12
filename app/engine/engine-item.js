@@ -10,7 +10,7 @@ var app = (function(me) {
       this.id = id;
       this.type = type;
       this.text = TYPE_TEXT[this.type];
-      this.xpos = 0;
+      this.xpos = ko.observable(0);
     }
 
     me.Item = Item;
