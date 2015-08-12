@@ -17,6 +17,7 @@
     "knockout": "~3.3.0",
     "jquery": "~2.1.4",
     "underscore": "~1.8.3",
-    "radiojs": "~0.2.0"
+    "radiojs": "~0.2.0",
+    "normalize.css": "~3.0.3"
   }
 }
