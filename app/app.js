@@ -11,7 +11,7 @@ window.app = (function(me, ko, radio) {
           me.engine.createItem('ball');
 
           createItemAtRandomTime();
-      }, Math.floor(Math.random() * 90) + 30);
+      }, Math.floor(Math.random() * 180) + 60);
     }
 
     createItemAtRandomTime();
