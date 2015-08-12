@@ -3,6 +3,8 @@ actions {
 
   width: 100%;
   height: 100px;
-  
+
   background-color: LightGray;
+
+  border-bottom: 1px solid black;
 }
