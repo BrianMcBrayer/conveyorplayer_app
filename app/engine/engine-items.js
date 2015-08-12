@@ -4,7 +4,7 @@ var app = (function(me) {
     var _itemUID = 0;
     var numberOfCreatedItems = 0;
 
-    var movementOffset = 5;
+    var movementOffset = 1;
 
     var conveyorSpeed = 50; // * 50 ms
     var speedupOffset = 100;

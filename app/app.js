@@ -8,7 +8,7 @@ window.app = (function(me, ko, radio) {
     // Create a few items
     me.engine.onTick(function() {
       me.engine.createItem('ball');
-    }, 30);
+    }, 60);
 
   }
 
