@@ -6,10 +6,15 @@ window.app = (function(me, ko, radio) {
     ko.applyBindings(me);
 
     // Create a few items
-    me.engine.onTick(function() {
-      me.engine.createItem('ball');
-    }, 60);
+    function createItemAtRandomTime() {
+      me.engine.oneTick(function() {
+          me.engine.createItem('ball');
 
+          createItemAtRandomTime();
+      }, Math.floor(Math.random() * 90) + 30);
+    }
+
+    createItemAtRandomTime();
   }
 
   return me;

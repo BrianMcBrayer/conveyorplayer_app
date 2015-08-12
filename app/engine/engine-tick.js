@@ -2,6 +2,7 @@ var app = (function(me) {
   me.engine = (function(me) {
     var currentTick = 0;
     var registeredTickers = [];
+    var registeredOneTickers = [];
     var tickIntervalId = setInterval(ticked, 15);
 
     me.onTick = onTick;
@@ -23,14 +24,32 @@ var app = (function(me) {
 
     function ticked() {
       currentTick++;
-      registeredTickers.forEach(runRegisteredTicker);
+
+      for(var r = 0, len = registeredTickers.length; r < len; r++) {
+        runRegisteredTicker(registeredTickers[r]);
+      }
+
+      var clearIndices = [];
+      for(var i = 0, len = registeredOneTickers.length; i < len; i++) {
+        if (runRegisteredTicker(registeredOneTickers[i])) {
+          clearIndices.push(i);
+        }
+      }
+
+      clearIndices.forEach(function(curI) {
+        registeredOneTickers.splice(curI, 1);
+      });
     }
 
     function runRegisteredTicker(ticker) {
       var tickMod = ticker.tickMod;
+
       if (tickMod == null || (tickMod != null && currentTick % tickMod === 0)) {
         ticker.fn(currentTick);
+        return true;
       }
+
+      return false;
     }
 
     return me;
