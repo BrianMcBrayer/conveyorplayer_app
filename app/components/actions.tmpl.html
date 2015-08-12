@@ -1,8 +1,6 @@
 <div>
-  Inflate
-  <action params='text: "Inflate"'></action>
-</div>
-<div>
-  Wrap
-  <action params='text: "Wrap"'></action>
+  <div data-bind="foreach: actions">
+    <action params="self: $data"><span data-bind="text: text"></span></action>
+  </div>
+
 </div>

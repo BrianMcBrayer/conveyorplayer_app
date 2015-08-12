@@ -6,7 +6,12 @@
 
   var app = {
     engine: engine,
-    actions: [],
+    actions: [
+      {
+        id: "inflate-action",
+        text: "Inflate"
+      }
+    ],
     items: []
   };
 
