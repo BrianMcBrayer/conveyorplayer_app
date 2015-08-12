@@ -9,10 +9,7 @@
 
   <body>
 
-    <header>
-      <actions params="actions: engine.actions">
-      </actions>
-    </header>
+    <actions params="actions: engine.actions"></actions>
 
     <div>
       Conveyor belt
@@ -33,6 +30,7 @@
     <div>
       Score
     </div>
+
     <footer>
       Copyright, stuff for ConveyorPlayer</span>
     </footer>
@@ -45,5 +43,10 @@
     <script src="/app/componentLoader.js" ></script>
     <script src="/app/componentRegistration.js" ></script>
     <script src="/app/app.js" ></script>
+    <script src="/app/engine.js" ></script>
+
+    <script>
+      app.start();
+    </script>
   </body>
 </html>
