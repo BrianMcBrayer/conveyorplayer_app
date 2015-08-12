@@ -1,25 +1,19 @@
 var app = (function(me) {
-  me.engine = (function(me) {
-
-    var TOPICS = Object.freeze({
-      activateAction: "actAct"
-    });
+  var engine = (function(me) {
 
     me.actions = ko.observableArray([
         { id: "inflate-action", text: "Inflate" },
         { id: "wrap-action", text: "Wrap" }
       ]);
-    me.items = [];
-
-    radio(TOPICS.activateAction).subscribe(activateAction);
+    me.activateAction = activateAction;
 
     function activateAction(action) {
-      console.log("Activated Action");
+      console.log("Activated!!!");
       console.dir(action);
     }
 
     return me;
-  })(me.engine || {});
+  })(me.engine);
 
   return me;
-})(window.app || {});
+})(window.app);

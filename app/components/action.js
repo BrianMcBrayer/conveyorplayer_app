@@ -1,4 +1,5 @@
-(function(radio) {
+(function(engine) {
+
   function viewModel (params) {
     var cleanParams = (params == null ? {} : params);
     var me = this;
@@ -7,9 +8,9 @@
     me.text = cleanParams.text;
 
     me.clicked = function() {
-      radio('actActRequest').broadcast(me);
+      engine.activateAction(me);
     }
   }
 
   return viewModel;
-})(radio);
+})(window.app.engine);
