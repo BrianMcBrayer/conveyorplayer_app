@@ -2,7 +2,7 @@ var app = (function(me) {
   me.engine = (function(me) {
     var currentTick = 0;
     var registeredTickers = [];
-    var tickIntervalId = setInterval(ticked, 25);
+    var tickIntervalId = setInterval(ticked, 15);
 
     me.onTick = onTick;
     me.offTick = offTick;
