@@ -19,7 +19,7 @@ var app = (function(me) {
     }
 
     function moveConveyor() {
-      me.items.forEach(moveSingleItem);
+      me.items().forEach(moveSingleItem);
     }
 
     function moveSingleItem(item) {
