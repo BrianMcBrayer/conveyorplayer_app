@@ -1,7 +1,11 @@
 var app = (function(me, $, doc) {
   me.engine = (function(me, $, doc) {
 
-    me.gameportWidth = $(document).width;    
+    me.gameportWidth = gameportWidth;
+
+    function gameportWidth() {
+      return $(document).width();
+    }
 
     return me;
   })(me.engine, jQuery, document);
