@@ -22,6 +22,7 @@ var app = (function(me) {
     }
 
     function ticked() {
+      currentTick++;
       registeredTickers.forEach(runRegisteredTicker);
     }
 
