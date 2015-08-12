@@ -4,7 +4,8 @@
     var allArgs = {
       actions: cleanParams.actions || []
     };
-
+    console.log("Foo, loaded all actions");
+    console.log("actions length is ", allArgs.actions.length);
     this.actions = allArgs.actions;
   }
 
