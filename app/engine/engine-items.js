@@ -1,10 +1,18 @@
 var app = (function(me) {
   me.engine = (function(me) {
 
-    me.items = ko.observableArray([
-        { id: "ball-item", text: "Ball" },
-        { id: "gift-item", text: "Gift" }
-      ]);    
+    var _itemUID = 0;
+
+    me.items = ko.observableArray();
+
+    function createItem() {
+      me.items.push({
+        id: 'createdItem-' + _itemUID++,
+        text: 'Ball'
+      });
+    }
+
+    setInterval(createItem, 3000);
 
     return me;
   })(me.engine);

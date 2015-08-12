@@ -4,7 +4,8 @@
     'actions',
     'action',
     'conveyor',
-    'conveyor-belt'
+    'conveyor-belt',
+    'item'
   ];
 
   autoComponents.forEach(function(component) {
