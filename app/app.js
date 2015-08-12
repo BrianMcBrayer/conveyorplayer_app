@@ -2,7 +2,8 @@
 
   var engine = {
     activateAction: function(action) {
-
+      console.log("Activated Action");
+      console.dir(action);
     },
     actions: ko.observableArray([
       { id: "inflate-action", text: "Inflate" },
@@ -12,7 +13,7 @@
   };
 
   var app = {
-    engine: engine    
+    engine: engine
   };
 
   ko.applyBindings(app);
