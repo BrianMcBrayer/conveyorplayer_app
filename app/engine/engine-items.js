@@ -24,6 +24,11 @@ var app = (function(me) {
 
     function moveSingleItem(item) {
       item.xpos(item.xpos() + movementOffset);
+
+      if (item.xpos() > me.gameportWidth) {
+        // Item is gone
+        me.items.remove(item);
+      }
     }
 
     me.onTick(createItem, 30);
