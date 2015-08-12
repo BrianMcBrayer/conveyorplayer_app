@@ -9,6 +9,10 @@ var app = (function(me) {
     me.oneTick = oneTick;
     me.offTick = offTick;
 
+    function oneTick(fn, tickMod) {
+      registeredOneTickers.push({fn: fn, tickMod: tickMod});
+    }
+
     function onTick(fn, tickMod) {
       registeredTickers.push({fn: fn, tickMod: tickMod});
     }
