@@ -7,9 +7,7 @@
 
 item {
   position: absolute;
-  display: inline-block;
-
-  bottom: 0;
+  display: inline-block;  
 }
 
 conveyor {
