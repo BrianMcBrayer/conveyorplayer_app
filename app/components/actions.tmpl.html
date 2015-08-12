@@ -1,7 +1,7 @@
 <div>
   <div data-bind="text: actions().length"></div>
   <div data-bind="foreach: actions">
-    <action params="id: id, text: text"></action>
+    <action params="id: id, text: text, activate: activateAction"></action>
   </div>
 
 </div>
