@@ -13,7 +13,7 @@ var app = (function(me) {
         self.id = id;
         self.type = type;
         self.text = TYPE_TEXT[this.type];
-        self.xpos = ko.observable(0);
+        self.xpos = ko.observable(-50);
         self.style = ko.computed(function() {
           return {
             left: self.xpos() + 'px'
