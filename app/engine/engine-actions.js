@@ -6,7 +6,9 @@ var app = (function(me) {
     }
 
     function inflateAction(item) {
-      item.color('green');
+      if (item.type === 'ball') {
+        item.color('green');
+      }      
     }
 
     me.actions = ko.observableArray([

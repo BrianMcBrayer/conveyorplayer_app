@@ -57,7 +57,13 @@ var app = (function(me) {
         }
 
         function createNextItem() {
-          createItem('ball');
+          var type;
+          if (Math.random() * 10 > 5) {
+            type = 'ball';
+          } else {
+            type = 'gift';
+          }
+          createItem(type);
         }
 
         function createItem(type) {
