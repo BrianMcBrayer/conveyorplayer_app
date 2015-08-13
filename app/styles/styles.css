@@ -42,6 +42,6 @@ actions {
   border-bottom: 1px solid black;
 }
 
-action.active {
+action .active {
   color: red;
 }
