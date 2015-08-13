@@ -14,9 +14,11 @@ var app = (function(me) {
         self.type = type;
         self.text = TYPE_TEXT[this.type];
         self.xpos = ko.observable(-50);
+        self.color = ko.observable('black');
         self.style = ko.computed(function() {
           return {
-            left: self.xpos() + 'px'
+            left: self.xpos() + 'px',
+            color: self.color()
           };
         });
       }

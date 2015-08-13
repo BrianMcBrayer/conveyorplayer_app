@@ -1,4 +1,5 @@
 <div data-bind="foreach: items">
-  <item data-bind="style: style" params="text: text"></item>
+  <item data-bind="style: style" params="text: text,
+                                         item: $data"></item>
 </div>
 <conveyor-belt></conveyor-belt>
