@@ -11,7 +11,7 @@
     });
 
     me.clicked = function() {
-      engine.activateAction(me);
+      engine.activateAction(params.action);
     }
   }
 
