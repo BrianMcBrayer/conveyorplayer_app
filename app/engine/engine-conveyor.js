@@ -3,7 +3,7 @@ var app = (function(me) {
     me.conveyor = (function(me) {
 
       var DEFAULTS = Object.freeze({
-        MOVEMENT_SPEED_MS: 100
+        MOVEMENT_SPEED_MS: 50
       });
 
       var movementOffset = 0.5;
