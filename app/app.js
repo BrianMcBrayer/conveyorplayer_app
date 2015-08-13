@@ -11,11 +11,11 @@ window.app = (function(me, ko, radio) {
 
     setInterval(function() {
       app.engine.conveyor.shouldSpeedUp();
-    }, 10000);
+    }, 2500);
 
     setInterval(function() {
       app.engine.conveyor.itemFactory.shouldSpeedUp();
-    }, 10000);
+    }, 5000);
   }
 
   return me;
