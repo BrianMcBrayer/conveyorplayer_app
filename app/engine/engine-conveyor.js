@@ -19,6 +19,7 @@ var app = (function(me) {
         me.start = start;
         me.stop = stop;
         me.reset = reset;
+        me.requestSpeedIncrease = requestSpeedIncrease;
 
         reset();
       }
