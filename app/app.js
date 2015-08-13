@@ -9,11 +9,17 @@ window.app = (function(me, ko, radio) {
     app.engine.conveyor.start();
     app.engine.conveyor.itemFactory.start();
 
+    var conInc = 0,
+        itemInc = 0;
     setInterval(function() {
+      console.log('speed up conveyor');
+      conInc++;
       app.engine.conveyor.shouldSpeedUp();
     }, 2500);
 
     setInterval(function() {
+      console.log('speed up items');
+      itemInc++;
       app.engine.conveyor.itemFactory.shouldSpeedUp();
     }, 5000);
   }
