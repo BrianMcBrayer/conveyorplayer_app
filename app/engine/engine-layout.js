@@ -8,7 +8,7 @@ var app = (function(me, $, doc) {
     }
 
     return me;
-  })(me.engine, jQuery, document);
+  })(me.engine || {}, jQuery, document);
 
   return me;
 })(window.app, jQuery, document);

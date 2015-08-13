@@ -13,7 +13,7 @@ var app = (function(me) {
     }
 
     return me;
-  })(me.engine);
+  })(me.engine || {});
 
   return me;
 })(window.app);

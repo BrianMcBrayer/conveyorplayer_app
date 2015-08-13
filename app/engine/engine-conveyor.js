@@ -69,7 +69,7 @@ var app = (function(me) {
     })(me.conveyor || {});
 
     return me;
-  })(me.engine);
+  })(me.engine || {});
 
   return me;
 })(window.app);

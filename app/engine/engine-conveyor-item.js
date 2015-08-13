@@ -24,7 +24,7 @@ var app = (function(me) {
       me.Item = Item;
 
       return me;
-    })(me.conveyor);
+    })(me.conveyor || {});
 
     return me;
   })(me.engine);
