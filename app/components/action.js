@@ -5,7 +5,10 @@
 
     me.id = params.id;
     me.text = params.text;
-    me.active = params.active;
+
+    me.active = ko.computed(function() {
+      engine.activeAction === params.action;
+    });
 
     me.clicked = function() {
       engine.activateAction(me);
