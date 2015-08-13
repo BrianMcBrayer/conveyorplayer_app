@@ -4,7 +4,7 @@ var app = (function(me) {
       me.itemFactory = (function(me) {
 
         var DEFAULTS = Object.freeze({
-          CREATION_SPEED_MS: 5000
+          CREATION_SPEED_MS: 3000
         });
 
         var _itemUID = 0;
@@ -49,7 +49,11 @@ var app = (function(me) {
             performSpeedUpLogic();
           }
 
-          queueLoopID = setTimeout(queueCreateItem, creationSpeedMS);
+          queueLoopID = setTimeout(queueCreateItem, adjustForVariance(creationSpeedMS));
+        }
+
+        function adjustForVariance(speed) {
+          return (speed * (Math.random() + 1));
         }
 
         function performSpeedUpLogic() {
