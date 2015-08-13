@@ -14,13 +14,14 @@ var app = (function(me) {
       new app.engine.Action('wrap-action', 'Wrap', wrapAction)
       ]);
     me.activateAction = activateAction;
+    me.selectItem = selectItem;
     me.activeAction = ko.observable();
 
     function activateAction(action) {
       me.activeAction(action);
     }
 
-    function itemSelected(item) {
+    function selectItem(item) {
       var action = me.activeAction();
       if (action !== null && typeof(action.fn) === 'function') {
         action.fn(item);

@@ -2,10 +2,10 @@
   function viewModel(params) {
     var me = this;
 
-    me.text = params.text;    
+    me.text = params.text;
 
     me.clicked = function() {
-      engine.itemSelected(params.item);
+      engine.selectItem(params.item);
     }
   }
 
