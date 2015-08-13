@@ -10,7 +10,7 @@ var app = (function(me) {
     me.activateAction = activateAction;
 
     function activateAction(action) {
-      action.active = true;
+      action.active(true);
       activateAction = action;
     }
 

@@ -5,8 +5,7 @@
 
     me.id = params.id;
     me.text = params.text;
-
-    me.active = false;
+    me.active = params.active;
 
     me.clicked = function() {
       engine.activateAction(me);
