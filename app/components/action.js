@@ -6,6 +6,12 @@
     me.id = params.id;
     me.text = params.text;
 
+    me.active = false;
+
+    me.activeState = ko.computed(function() {
+      return (me.active ? 'active' : '');
+    });
+
     me.clicked = function() {
       engine.activateAction(me);
     }

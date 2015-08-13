@@ -1,6 +1,8 @@
 var app = (function(me) {
   me.engine = (function(me) {
 
+    var activeAction;
+
     me.actions = ko.observableArray([
         { id: "inflate-action", text: "Inflate" },
         { id: "wrap-action", text: "Wrap" }
@@ -8,8 +10,8 @@ var app = (function(me) {
     me.activateAction = activateAction;
 
     function activateAction(action) {
-      console.log("Activated!!!");
-      console.dir(action);
+      action.active = true;
+      activateAction = action;
     }
 
     return me;
