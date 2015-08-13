@@ -6,6 +6,7 @@ var app = (function(me) {
         MOVEMENT_SPEED_MS: 2000
       });
 
+      var movementOffset = 1;
       var shouldSpeedUp;
       var movementSpeedMS;
       var moveLoopID;
