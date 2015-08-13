@@ -7,7 +7,7 @@ window.app = (function(me, ko, radio) {
     ko.applyBindings(app);
 
     app.engine.conveyor.start();
-    app.engine.conveyor.itemsFactory.start();
+    app.engine.conveyor.itemFactory.start();
   }
 
   return me;
