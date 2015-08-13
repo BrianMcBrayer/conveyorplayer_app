@@ -60,9 +60,11 @@ var app = (function(me) {
       }
 
       function moveSingleItem(item) {
+        var gameportWidth = app.engine.gameportWidth();
+
         item.xpos(item.xpos() + movementOffset);
 
-        if (item.xpos() > me.gameportWidth()) {
+        if (item.xpos() > gameportWidth) {
           // Item is gone
           me.items.remove(item);
         }
