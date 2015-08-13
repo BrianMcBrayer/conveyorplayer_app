@@ -7,7 +7,7 @@
 
 item {
   position: absolute;
-  display: inline-block;  
+  display: inline-block;
 }
 
 conveyor {
@@ -40,4 +40,8 @@ actions {
   background-color: LightGray;
 
   border-bottom: 1px solid black;
+}
+
+action.active {
+  color: red;
 }
