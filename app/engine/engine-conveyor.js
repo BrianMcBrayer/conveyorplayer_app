@@ -13,6 +13,8 @@ var app = (function(me) {
       init();
 
       function init() {
+        me.items = ko.observableArray();
+
         me.start = start;
         me.stop = stop;
         me.reset = reset;
