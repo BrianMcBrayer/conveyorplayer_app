@@ -4,7 +4,7 @@ var app = (function(me) {
       me.itemFactory = (function(me) {
 
         var DEFAULTS = Object.freeze({
-          CREATION_SPEED_MS: 3000
+          CREATION_SPEED_MS: 5000
         });
 
         var _itemUID = 0;

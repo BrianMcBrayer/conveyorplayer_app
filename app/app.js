@@ -8,6 +8,14 @@ window.app = (function(me, ko, radio) {
 
     app.engine.conveyor.start();
     app.engine.conveyor.itemFactory.start();
+
+    setInterval(function() {
+      app.engine.conveyor.shouldSpeedUp();
+    }, 10000);
+
+    setInterval(function() {
+      app.engine.conveyor.itemFactory.shouldSpeedUp();
+    }, 10000);
   }
 
   return me;
