@@ -6,7 +6,7 @@
     me.id = params.id;
     me.text = params.text;
 
-    me.active = ko.computed(function() {
+    me.active = ko.pureComputed(function() {
       return engine.activeAction() === params.action;
     });
 
