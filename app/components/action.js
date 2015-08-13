@@ -7,7 +7,7 @@
     me.text = params.text;
 
     me.active = ko.computed(function() {
-      engine.activeAction === params.action;
+      engine.activeAction() === params.action;
     });
 
     me.clicked = function() {
