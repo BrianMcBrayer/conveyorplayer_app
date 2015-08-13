@@ -14,13 +14,13 @@ window.app = (function(me, ko, radio) {
     setInterval(function() {
       console.log('speed up conveyor');
       conInc++;
-      app.engine.conveyor.shouldSpeedUp();
+      app.engine.conveyor.requestSpeedIncrease();
     }, 2500);
 
     setInterval(function() {
       console.log('speed up items');
       itemInc++;
-      app.engine.conveyor.itemFactory.shouldSpeedUp();
+      app.engine.conveyor.itemFactory.requestSpeedIncrease();
     }, 5000);
   }
 
