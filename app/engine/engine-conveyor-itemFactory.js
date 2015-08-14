@@ -59,8 +59,8 @@ var app = (function(me) {
         function performSpeedUpLogic() {
           creationSpeedMS *= 0.9;
 
-          if (creationSpeedMS < 50) {
-            creationSpeedMS = 50;
+          if (creationSpeedMS < 500) {
+            creationSpeedMS = 500;
           }
         }
 

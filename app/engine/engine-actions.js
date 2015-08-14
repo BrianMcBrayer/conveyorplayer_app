@@ -19,7 +19,7 @@ var app = (function(me) {
       ]);
     me.activateAction = activateAction;
     me.selectItem = selectItem;
-    me.activeAction = ko.observable();
+    me.activeAction = ko.observable();    
 
     function activateAction(action) {
       me.activeAction(action);
