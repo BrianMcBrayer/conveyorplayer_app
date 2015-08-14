@@ -8,6 +8,9 @@
 item {
   position: absolute;
   display: inline-block;
+
+  cursor: pointer;
+  user-select: none;
 }
 
 conveyor {
@@ -42,10 +45,14 @@ actions {
   border-bottom: 1px solid black;
 }
 
+action {
+  user-select: none;
+}
+
 action .active {
   border: 1px solid Blue;
 }
 
 action :hover {
-  background-color: LightGray;
+  background-color: White;
 }
