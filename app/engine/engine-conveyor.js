@@ -54,6 +54,10 @@ var app = (function(me) {
 
       function performSpeedUpLogic() {
         movementSpeedMS *= 0.9;
+
+        if (movementSpeedMS < 1) {
+          movementSpeedMS = 1;
+        }
       }
 
       function moveConveyor() {
