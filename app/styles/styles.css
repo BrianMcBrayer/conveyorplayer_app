@@ -43,5 +43,9 @@ actions {
 }
 
 action .active {
-  color: red;
+  border: 1px solid Blue;
+}
+
+action :hover {
+  background-color: LightGray;
 }

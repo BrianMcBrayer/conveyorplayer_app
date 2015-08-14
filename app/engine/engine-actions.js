@@ -2,13 +2,15 @@ var app = (function(me) {
   me.engine = (function(me) {
 
     function wrapAction(item) {
-      item.color('red');
+      if (item.type === 'gift') {
+        item.color('red');
+      }
     }
 
     function inflateAction(item) {
       if (item.type === 'ball') {
         item.color('green');
-      }      
+      }
     }
 
     me.actions = ko.observableArray([
