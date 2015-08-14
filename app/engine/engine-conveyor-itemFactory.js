@@ -58,6 +58,10 @@ var app = (function(me) {
 
         function performSpeedUpLogic() {
           creationSpeedMS *= 0.9;
+
+          if (creationSpeedMS < 50) {
+            creationSpeedMS = 50;
+          }
         }
 
         function createNextItem() {
