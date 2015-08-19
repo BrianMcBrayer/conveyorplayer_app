@@ -1,19 +1,23 @@
 var app = (function(me) {
   me.engine = (function(me) {
+    me.score = (function(me) {
 
-    me.totalScore = ko.observable();
-    me.increaseScore = increaseScore;
-    me.decreaseScore = decreaseScore;
+      me.totalScore = ko.observable();
+      me.increase = increase;
+      me.decrease = decrease;
 
-    function increaseScore(reason, increaseBy) {
-      me.totalScore(me.totalScore() + increaseBy);
-      me.notifyPositive(reason);
-    }
+      function increase(reason, increaseBy) {
+        me.totalScore(me.totalScore() + increaseBy);
+        me.notifications.positive(reason);
+      }
 
-    function decreaseScore(reason, decreaseBy) {
-      me.totalScore(me.totalScore() - decreaseBy);
-      me.notifyNegative(reason);
-    }
+      function decrease(reason, decreaseBy) {
+        me.totalScore(me.totalScore() - decreaseBy);
+        me.notifications.negative(reason);
+      }
+
+      return me;
+    })(me.score || {});
 
     return me;
   })(me.engine || {});

@@ -1,16 +1,20 @@
 var app = (function(me, Messenger) {
   me.engine = (function(me, Messenger) {
+    me.notifications = (function(me, Messenger) {
 
-    me.notifyPositive = notifyPositive;
-    me.notifyNegative = notifyNegative;
+      me.positive = positive;
+      me.negative = negative;
 
-    function notifyPositive(message) {
-      Messenger().success(message);
-    }
+      function positive(message) {
+        Messenger().success(message);
+      }
 
-    function notifyNegative(message) {
-      Messenger().error(message);
-    }
+      function negative(message) {
+        Messenger().error(message);
+      }
+
+      return me;
+    })(me.notifications || {}, Messenger);
 
     return me;
   })(me.engine || {}, Messenger);

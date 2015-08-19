@@ -4,18 +4,18 @@ var app = (function(me) {
     function wrapAction(item) {
       if (item.type === 'gift') {
         item.color('red');
-        me.increaseScore('Wrapped gift!', 50);
+        me.increase('Wrapped gift!', 50);
       } else {
-        me.decreaseScore('Can\'t wrap a ' + item.type, 25);
+        me.decrease('Can\'t wrap a ' + item.type, 25);
       }
     }
 
     function inflateAction(item) {
       if (item.type === 'ball') {
         item.color('green');
-        me.increaseScore('Inflated ball!', 50);
+        me.score.increase('Inflated ball!', 50);
       } else {
-        me.decreaseScore('Can\'t inflate a ' + item.type, 25);
+        me.score.decrease('Can\'t inflate a ' + item.type, 25);
       }
     }
 
